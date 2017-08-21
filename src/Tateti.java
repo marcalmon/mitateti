@@ -13,6 +13,58 @@ import javax.swing.JOptionPane;
 public class Tateti extends javax.swing.JFrame {
     
     boolean turno=true;
+    
+    public void Ganador(){
+        if (btn1.getText()=="X" && btn2.getText()=="X" && btn3.getText()=="X"){
+            JOptionPane.showMessageDialog(null, "Ganó!!!");        
+        }
+        if (btn4.getText()=="X" && btn5.getText()=="X" && btn6.getText()=="X"){
+            JOptionPane.showMessageDialog(null, "Ganó!!!");        
+        }
+        if (btn7.getText()=="X" && btn8.getText()=="X" && btn9.getText()=="X"){
+            JOptionPane.showMessageDialog(null, "Ganó!!!");        
+        }
+        if (btn1.getText()=="X" && btn4.getText()=="X" && btn7.getText()=="X"){
+            JOptionPane.showMessageDialog(null, "Ganó!!!");        
+        }
+        if (btn2.getText()=="X" && btn5.getText()=="X" && btn8.getText()=="X"){
+            JOptionPane.showMessageDialog(null, "Ganó!!!");        
+        }
+        if (btn3.getText()=="X" && btn6.getText()=="X" && btn9.getText()=="X"){
+            JOptionPane.showMessageDialog(null, "Ganó!!!");        
+        }
+        if (btn1.getText()=="X" && btn5.getText()=="X" && btn9.getText()=="X"){
+            JOptionPane.showMessageDialog(null, "Ganó!!!");        
+        }
+        if (btn3.getText()=="X" && btn5.getText()=="X" && btn7.getText()=="X"){
+            JOptionPane.showMessageDialog(null, "Ganó!!!");        
+        }
+        
+        if (btn1.getText()=="O" && btn2.getText()=="O" && btn3.getText()=="O"){
+            JOptionPane.showMessageDialog(null, "Ganó!!!");        
+        }
+        if (btn4.getText()=="O" && btn5.getText()=="O" && btn6.getText()=="O"){
+            JOptionPane.showMessageDialog(null, "Ganó!!!");        
+        }
+        if (btn7.getText()=="O" && btn8.getText()=="O" && btn9.getText()=="O"){
+            JOptionPane.showMessageDialog(null, "Ganó!!!");        
+        }
+        if (btn1.getText()=="O" && btn4.getText()=="O" && btn7.getText()=="O"){
+            JOptionPane.showMessageDialog(null, "Ganó!!!");        
+        }
+        if (btn2.getText()=="O" && btn5.getText()=="O" && btn8.getText()=="O"){
+            JOptionPane.showMessageDialog(null, "Ganó!!!");        
+        }
+        if (btn3.getText()=="O" && btn6.getText()=="O" && btn9.getText()=="O"){
+            JOptionPane.showMessageDialog(null, "Ganó!!!");        
+        }
+        if (btn1.getText()=="O" && btn5.getText()=="O" && btn9.getText()=="O"){
+            JOptionPane.showMessageDialog(null, "Ganó!!!");        
+        }
+        if (btn3.getText()=="O" && btn5.getText()=="O" && btn7.getText()=="O"){
+            JOptionPane.showMessageDialog(null, "Ganó!!!");        
+        }
+    }
 
     /**
      * Creates new form Tateti
@@ -66,7 +118,6 @@ public class Tateti extends javax.swing.JFrame {
         btn8 = new javax.swing.JButton();
         btn_reset = new javax.swing.JButton();
         btn_salir = new javax.swing.JButton();
-        btn10 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -158,13 +209,6 @@ public class Tateti extends javax.swing.JFrame {
             }
         });
 
-        btn10.setText("Ganó!");
-        btn10.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btn10MouseClicked(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -191,15 +235,10 @@ public class Tateti extends javax.swing.JFrame {
                                 .addComponent(btn_stop)
                                 .addGap(23, 23, 23)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btn3, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btn_reset))
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btn6, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
-                                .addComponent(btn10))))
+                            .addComponent(btn3, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_reset)
+                            .addComponent(btn6, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 97, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(12, 12, 12)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -230,16 +269,11 @@ public class Tateti extends javax.swing.JFrame {
                     .addComponent(btn2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btn4, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btn5, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btn6, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(52, 52, 52)
-                        .addComponent(btn10)))
+                .addGap(28, 28, 28)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn4, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn5, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn6, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btn8, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -269,7 +303,7 @@ public class Tateti extends javax.swing.JFrame {
             op1_juan.setSelected(true);
             turno=true;
         }
-        
+        Ganador();
     }//GEN-LAST:event_btn6ActionPerformed
     //Encontrar la diferencia con el metodo MouseClicked
     private void btn_salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_salirActionPerformed
@@ -310,6 +344,7 @@ public class Tateti extends javax.swing.JFrame {
             op1_juan.setSelected(true);
             turno=true;
         }     
+        Ganador();
     }//GEN-LAST:event_btn1ActionPerformed
 
     private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
@@ -324,6 +359,7 @@ public class Tateti extends javax.swing.JFrame {
             op1_juan.setSelected(true);
             turno=true;
         }
+        Ganador();
     }//GEN-LAST:event_btn2ActionPerformed
 
     private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
@@ -338,6 +374,7 @@ public class Tateti extends javax.swing.JFrame {
             op1_juan.setSelected(true);
             turno=true;
         }
+        Ganador();
     }//GEN-LAST:event_btn3ActionPerformed
 
     private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
@@ -352,6 +389,7 @@ public class Tateti extends javax.swing.JFrame {
             op1_juan.setSelected(true);
             turno=true;
         }
+        Ganador();
     }//GEN-LAST:event_btn4ActionPerformed
 
     private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn5ActionPerformed
@@ -366,6 +404,7 @@ public class Tateti extends javax.swing.JFrame {
             op1_juan.setSelected(true);
             turno=true;
         }
+        Ganador();
     }//GEN-LAST:event_btn5ActionPerformed
 
     private void btn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn7ActionPerformed
@@ -380,6 +419,7 @@ public class Tateti extends javax.swing.JFrame {
             op1_juan.setSelected(true);
             turno=true;
         }
+        Ganador();
     }//GEN-LAST:event_btn7ActionPerformed
 
     private void btn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn8ActionPerformed
@@ -394,6 +434,7 @@ public class Tateti extends javax.swing.JFrame {
             op1_juan.setSelected(true);
             turno=true;
         }
+        Ganador();
     }//GEN-LAST:event_btn8ActionPerformed
 
     private void btn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn9ActionPerformed
@@ -408,6 +449,7 @@ public class Tateti extends javax.swing.JFrame {
             op1_juan.setSelected(true);
             turno=true;
         }
+        Ganador();
     }//GEN-LAST:event_btn9ActionPerformed
 
     private void btn_stopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_stopActionPerformed
@@ -440,59 +482,6 @@ public class Tateti extends javax.swing.JFrame {
         op1_juan.setSelected(true);
         
     }//GEN-LAST:event_btn_resetActionPerformed
-
-    private void btn10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn10MouseClicked
-        // TODO add your handling code here:
-        if (btn1.getText()=="X" && btn2.getText()=="X" && btn3.getText()=="X"){
-            JOptionPane.showMessageDialog(null, "Ganó!!!");        
-        }
-        if (btn4.getText()=="X" && btn5.getText()=="X" && btn6.getText()=="X"){
-            JOptionPane.showMessageDialog(null, "Ganó!!!");        
-        }
-        if (btn7.getText()=="X" && btn8.getText()=="X" && btn9.getText()=="X"){
-            JOptionPane.showMessageDialog(null, "Ganó!!!");        
-        }
-        if (btn1.getText()=="X" && btn4.getText()=="X" && btn7.getText()=="X"){
-            JOptionPane.showMessageDialog(null, "Ganó!!!");        
-        }
-        if (btn2.getText()=="X" && btn5.getText()=="X" && btn8.getText()=="X"){
-            JOptionPane.showMessageDialog(null, "Ganó!!!");        
-        }
-        if (btn3.getText()=="X" && btn6.getText()=="X" && btn9.getText()=="X"){
-            JOptionPane.showMessageDialog(null, "Ganó!!!");        
-        }
-        if (btn1.getText()=="X" && btn5.getText()=="X" && btn9.getText()=="X"){
-            JOptionPane.showMessageDialog(null, "Ganó!!!");        
-        }
-        if (btn3.getText()=="X" && btn5.getText()=="X" && btn7.getText()=="X"){
-            JOptionPane.showMessageDialog(null, "Ganó!!!");        
-        }
-        
-        if (btn1.getText()=="O" && btn2.getText()=="O" && btn3.getText()=="O"){
-            JOptionPane.showMessageDialog(null, "Ganó!!!");        
-        }
-        if (btn4.getText()=="O" && btn5.getText()=="O" && btn6.getText()=="O"){
-            JOptionPane.showMessageDialog(null, "Ganó!!!");        
-        }
-        if (btn7.getText()=="O" && btn8.getText()=="O" && btn9.getText()=="O"){
-            JOptionPane.showMessageDialog(null, "Ganó!!!");        
-        }
-        if (btn1.getText()=="O" && btn4.getText()=="O" && btn7.getText()=="O"){
-            JOptionPane.showMessageDialog(null, "Ganó!!!");        
-        }
-        if (btn2.getText()=="O" && btn5.getText()=="O" && btn8.getText()=="O"){
-            JOptionPane.showMessageDialog(null, "Ganó!!!");        
-        }
-        if (btn3.getText()=="O" && btn6.getText()=="O" && btn9.getText()=="O"){
-            JOptionPane.showMessageDialog(null, "Ganó!!!");        
-        }
-        if (btn1.getText()=="O" && btn5.getText()=="O" && btn9.getText()=="O"){
-            JOptionPane.showMessageDialog(null, "Ganó!!!");        
-        }
-        if (btn3.getText()=="O" && btn5.getText()=="O" && btn7.getText()=="O"){
-            JOptionPane.showMessageDialog(null, "Ganó!!!");        
-        }
-    }//GEN-LAST:event_btn10MouseClicked
 
     /**
      * @param args the command line arguments
@@ -531,7 +520,6 @@ public class Tateti extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn1;
-    private javax.swing.JButton btn10;
     private javax.swing.JButton btn2;
     private javax.swing.JButton btn3;
     private javax.swing.JButton btn4;
